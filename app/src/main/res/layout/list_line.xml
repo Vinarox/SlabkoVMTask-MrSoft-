@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60sp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@id/rightColumn"
+        android:layout_toStartOf="@id/rightColumn">
+
+
+        <FrameLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="20sp">
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="20sp">
+            <TextView
+                android:id="@+id/languageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/languageLabel"
+                android:textColor="@color/primaryTextColor"/>
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/languageLabel"
+                android:layout_toEndOf="@id/languageLabel"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_light"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="20sp">
+            <TextView
+                android:id="@+id/populationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/populationLabel"
+                android:textColor="@color/primaryTextColor"/>
+            <TextView
+                android:id="@+id/population"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/populationLabel"
+                android:layout_toRightOf="@id/populationLabel"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_light"/>
+
+
+            <TextView
+                android:id="@+id/salaryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/averageSalary"
+                android:layout_toLeftOf="@id/averageSalary"
+                android:text="@string/salaryLabel"
+                android:textColor="@color/primaryTextColor"/>
+            <TextView
+                android:id="@+id/averageSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_light"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rightColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:id="@+id/capitalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/isCapitalLabel"
+            android:textColor="@color/primaryTextColor"/>
+        <ImageView
+            android:id="@+id/capitalChecker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/capitalLabel"
+            android:text="@string/isCapitalLabel"
+            android:src="@drawable/ic_accept"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"/>
+</RelativeLayout>

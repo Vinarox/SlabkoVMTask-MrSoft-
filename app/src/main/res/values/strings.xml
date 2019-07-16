@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SlabkoVM Task</string>
+
+    <string name="cityLabel">Город</string>
+    <string name="isCapitalLabel">Столица</string>
+    <string name="languageLabel">Язык населения: </string>
+    <string name="populationLabel">Население: </string>
+    <string name="salaryLabel">Ср.зарплата: </string>
+
+    <string name="salarySort">Сортировать по зарплате </string>
+    <string name="noSort">Без сортировки </string>
+    <string name="search">Поиск</string>
+    <string name="sort">Сортировка</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
+
