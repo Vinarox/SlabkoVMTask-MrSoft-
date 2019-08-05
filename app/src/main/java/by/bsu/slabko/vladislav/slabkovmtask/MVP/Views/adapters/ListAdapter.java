@@ -75,4 +75,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     public int getItemCount() {
         return databaseContainer.getItems().size();
     }
+
+    public void deleteItem(int position) {
+        databaseContainer.deleteItem(position);
+    }
 }

@@ -27,7 +27,8 @@ import io.reactivex.Completable;
 import io.reactivex.ObservableSource;
 
 
-public class MainActivity extends AppCompatActivity implements MainContract.View {
+public class MainActivity extends AppCompatActivity
+        implements MainContract.View{
     //@Inject
     MainContract.Presenter mPresenter;
 

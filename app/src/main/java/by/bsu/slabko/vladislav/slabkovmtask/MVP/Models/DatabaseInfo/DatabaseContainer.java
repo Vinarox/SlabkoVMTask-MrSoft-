@@ -69,4 +69,8 @@ public class DatabaseContainer{
         isNeedAllElements = false;
         this.items = items;
     }
+
+    public void deleteItem(int pos){
+        items.remove(pos);
+    }
 }

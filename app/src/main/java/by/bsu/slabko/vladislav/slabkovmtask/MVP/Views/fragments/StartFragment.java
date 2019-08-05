@@ -5,21 +5,25 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import javax.inject.Inject;
 
+import by.bsu.slabko.vladislav.slabkovmtask.MVP.MainContract;
 import by.bsu.slabko.vladislav.slabkovmtask.MVP.Views.MainActivity;
 import by.bsu.slabko.vladislav.slabkovmtask.MVP.Views.adapters.ListAdapter;
 import by.bsu.slabko.vladislav.slabkovmtask.R;
+import by.bsu.slabko.vladislav.slabkovmtask.recycleSwipe.SwipeToDeleteCallback;
 
 
 public class StartFragment extends Fragment
-        implements MainActivity.OnActivityInteractionListener {
+        implements MainActivity.OnActivityInteractionListener{
     //@Inject
     private ListAdapter mAdapter;
+    private MainContract.View view;
 
     public StartFragment() {}
 
@@ -32,6 +36,7 @@ public class StartFragment extends Fragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        view = (MainActivity)getContext();
     }
 
     @Override
@@ -46,6 +51,9 @@ public class StartFragment extends Fragment
 
         mAdapter = new ListAdapter((getActivity()), inflater);
         recyclerView.setAdapter(mAdapter);
+        ItemTouchHelper itemTouchHelper = new
+                ItemTouchHelper(new SwipeToDeleteCallback(mAdapter, view));
+        itemTouchHelper.attachToRecyclerView(recyclerView);
         return v;
     }
 
@@ -72,4 +80,5 @@ public class StartFragment extends Fragment
             mAdapter.notifyDataSetChanged();
         }
     }
+
 }
